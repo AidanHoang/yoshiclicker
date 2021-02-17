@@ -13,21 +13,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-image:url(background.png);">
 
 <div id="full"; style="margin: auto">
 <div id="top" style="float:left">
 
+<div id="toptext" style="line-height: 0.5">
+<p>&#160;</p>
 <h1 style="text-align:left; font-family: 'Varela Round'; padding-left:110px">Yoshi Clicker</h1>
 <h1 style="text-align:left; font-family: 'Roboto', sans-serif; padding-left:150px" id="demo">0 Eggs<h1>
-<img id="egg" onmouseover="hoverOver()" onmouseout="hoverOut()" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ed991cf4-7c8c-4530-b6ba-a3abf3ab2eae/dd1l1e7-c67afc92-74e1-4dbb-9073-50e9e01e7353.png/v1/fill/w_400,h_439,strp/super_mario__yoshi_egg_2d_by_joshuat1306_dd1l1e7-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00MzkiLCJwYXRoIjoiXC9mXC9lZDk5MWNmNC03YzhjLTQ1MzAtYjZiYS1hM2FiZjNhYjJlYWVcL2RkMWwxZTctYzY3YWZjOTItNzRlMS00ZGJiLTkwNzMtNTBlOWUwMWU3MzUzLnBuZyIsIndpZHRoIjoiPD00MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.UQWV_lHi2tHvMDytLzQGfSkkm11EgoVD-xu7ZA3KRHY" type="button" onclick="clickNow()" style="width:17%; padding-left:150px">
+</div id="toptext">
+<p>&#160;</p>
+<p>&#160;</p>
+<img id="egg" onmouseover="hoverOver()" onmouseout="hoverOut()" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ed991cf4-7c8c-4530-b6ba-a3abf3ab2eae/dd1l1e7-c67afc92-74e1-4dbb-9073-50e9e01e7353.png/v1/fill/w_400,h_439,strp/super_mario__yoshi_egg_2d_by_joshuat1306_dd1l1e7-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00MzkiLCJwYXRoIjoiXC9mXC9lZDk5MWNmNC03YzhjLTQ1MzAtYjZiYS1hM2FiZjNhYjJlYWVcL2RkMWwxZTctYzY3YWZjOTItNzRlMS00ZGJiLTkwNzMtNTBlOWUwMWU3MzUzLnBuZyIsIndpZHRoIjoiPD00MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.UQWV_lHi2tHvMDytLzQGfSkkm11EgoVD-xu7ZA3KRHY" type="button" onclick="clickNow()" style="width:35%; padding-left:150px">
+<p>&#160;</p>
+<p>&#160;</p>
 <p>&#160;</p>
 <h2>V. 0.001</h2>
 
 </div id="top">
 
 <div id="vertical">
-<img src="vertical.png" style="text-align:center; float: left;">
+<img src="vertical.png" style="text-align:left; float: left;">
 </div id="vertical">
 
 <div id="shop" style="float:right;">
@@ -56,11 +63,11 @@ d = 100
 e = 0
 
 function hoverOver() {
-    document.getElementById("egg").style.width = "20%";
+    document.getElementById("egg").style.width = "40%";
 }
 
 function hoverOut() {
-    document.getElementById("egg").style.width = "17%";
+    document.getElementById("egg").style.width = "35%";
 }
 
 function clickNow() {

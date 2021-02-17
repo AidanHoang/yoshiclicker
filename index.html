@@ -27,15 +27,15 @@
 <p>&#160;</p>
 <p>&#160;</p>
 <img id="egg" onmouseover="hoverOver()" onmouseout="hoverOut()" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ed991cf4-7c8c-4530-b6ba-a3abf3ab2eae/dd1l1e7-c67afc92-74e1-4dbb-9073-50e9e01e7353.png/v1/fill/w_400,h_439,strp/super_mario__yoshi_egg_2d_by_joshuat1306_dd1l1e7-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00MzkiLCJwYXRoIjoiXC9mXC9lZDk5MWNmNC03YzhjLTQ1MzAtYjZiYS1hM2FiZjNhYjJlYWVcL2RkMWwxZTctYzY3YWZjOTItNzRlMS00ZGJiLTkwNzMtNTBlOWUwMWU3MzUzLnBuZyIsIndpZHRoIjoiPD00MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.UQWV_lHi2tHvMDytLzQGfSkkm11EgoVD-xu7ZA3KRHY" type="button" onclick="clickNow()" style="width:35%; padding-left:150px">
+<h2 style="padding-left:140px; font-family: 'Roboto', sans-serif;" id="eggsecond">Eggs Per Second: 0</h2>
 <p>&#160;</p>
 <p>&#160;</p>
-<p>&#160;</p>
-<h2>V. 0.001</h2>
+<h2 style="font-family: 'Roboto', sans-serif;">V. 0.001</h2>
 
 </div id="top">
 
 <div id="shop" style="float:left;">
-<h1 style="float:left; padding-left:250px">Egg Shopkeeper</h1>
+<h1 style="float:left; padding-left:240px; font-family: 'Varela Round';">Egg Shopkeeper</h1>
 <h1 style="clear:both"></h1>
 <div id="buttons" style="margin-left: 310px">
 <button type="button" onclick="clickSpeed()" style="display: block;">Click Multiplier</button>
@@ -45,8 +45,8 @@
 <button type="button" onclick="autoBuy()" style="display: block;">Auto Lay Egg</button>
 </div id="buttons">
 <p>&#160;</p>
-<h1 style="padding-left:230px">Last Achievement</h1>
-<h1 id="none" style="padding-left:250px">None Achieved</h1>
+<h1 style="padding-left:230px; font-family: 'Roboto', sans-serif;">Last Achievement</h1>
+<h1 id="none" style="padding-left:240px; font-family: 'Varela Round';">None Achieved</h1>
 </div id="shop">
 
 </div id="full">
@@ -110,6 +110,7 @@ function autoBuy() {
         d = d * 1.5
         document.getElementById("demo").innerHTML = x + " " + "Eggs";
         autoClick()
+        document.getElementById("eggsecond").innerHTML = "Eggs Per Second: " + e;
     }
     else {
         alert("You Have Insufficient Funds! (" + Math.round(d) + " Eggs)")
@@ -133,7 +134,7 @@ function firstClick() {
 function achieveClick() {
     if (g === 1)
     document.getElementById("none").innerHTML = "Early Clicks";
-    document.getElementById("none").style.paddingLeft = "270px";
+    document.getElementById("none").style.paddingLeft = "280px";
 }
 </script>
 

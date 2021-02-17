@@ -48,7 +48,7 @@
 </div id="full">
 
 <script>
-var x, y, z, a, b, c
+var x, y, z, a, b, c, d, e, f
 x = 0
 y = 1
 z = 1
@@ -57,6 +57,7 @@ b = 45
 c = "true"
 d = 100
 e = 0
+f = 0
 
 function hoverOver() {
     document.getElementById("egg").style.width = "40%";
@@ -69,6 +70,8 @@ function hoverOut() {
 function clickNow() {
     x =  x + y * z;
     document.getElementById("demo").innerHTML = x + " " + "Eggs";
+    f = f + 1
+    firstClick()
 }
 
 function clickEff() {
@@ -113,6 +116,11 @@ function autoClick() {
         setTimeout(autoClick, 1500);
         x = x + e;
         document.getElementById("demo").innerHTML = x + " " + "Eggs";
+}
+
+function firstClick() {
+    if (f === 1)
+        alert("Achievement Get! \n Early Clicks: Click on The Egg Once!");
 }
 </script>
 

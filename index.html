@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="full"; style="margin: auto">
+<div id="top" style="float:left">
+
+<h1 style="text-align:left; font-family: 'Varela Round'; padding-left:110px">Yoshi Clicker</h1>
+<h1 style="text-align:left; font-family: 'Roboto', sans-serif; padding-left:150px" id="demo">0 Eggs<h1>
+<img id="egg" onmouseover="hoverOver()" onmouseout="hoverOut()" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ed991cf4-7c8c-4530-b6ba-a3abf3ab2eae/dd1l1e7-c67afc92-74e1-4dbb-9073-50e9e01e7353.png/v1/fill/w_400,h_439,strp/super_mario__yoshi_egg_2d_by_joshuat1306_dd1l1e7-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00MzkiLCJwYXRoIjoiXC9mXC9lZDk5MWNmNC03YzhjLTQ1MzAtYjZiYS1hM2FiZjNhYjJlYWVcL2RkMWwxZTctYzY3YWZjOTItNzRlMS00ZGJiLTkwNzMtNTBlOWUwMWU3MzUzLnBuZyIsIndpZHRoIjoiPD00MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.UQWV_lHi2tHvMDytLzQGfSkkm11EgoVD-xu7ZA3KRHY" type="button" onclick="clickNow()" style="width:17%; padding-left:150px">
+<p>&#160;</p>
+<h2>V. 0.001</h2>
+
+</div id="top">
+
+<div id="vertical">
+<img src="vertical.png" style="text-align:center; float: left;">
+</div id="vertical">
+
+<div id="shop" style="float:right;">
+<h1 style="float:right; padding-right:220px">Egg Shopkeeper</h1>
+<h1 style="clear:both"></h1>
+<div id="buttons">
+<button type="button" onclick="clickSpeed()" style="display: block;">Click Multiplier</button>
+<p>&#160;</p>
+<button type="button" onclick="clickEff()" style="display: block;">Click Efficiency</button>
+<p>&#160;</p>
+<button type="button" onclick="autoBuy()" style="display: block;">Auto Lay Egg</button>
+</div id="buttons">
+</div id="shop">
+
+</div id="full">
+
+<script>
+var x, y, z, a, b, c
+x = 0
+y = 1
+z = 1
+a = 1
+b = 1
+c = "true"
+d = 100
+e = 0
+
+function hoverOver() {
+    document.getElementById("egg").style.width = "20%";
+}
+
+function hoverOut() {
+    document.getElementById("egg").style.width = "17%";
+}
+
+function clickNow() {
+    x =  x + y * z;
+    document.getElementById("demo").innerHTML = x + " " + "Eggs";
+}
+
+function clickEff() {
+    if (x > a) {
+        x = Math.round(x - a);
+        y = y + 1;
+        a = a * 1.5
+        document.getElementById("demo").innerHTML = x + " " + "Eggs";
+    }
+    else {
+        alert("You Have Insufficient Funds! (" + Math.round(a) + " Eggs)");
+    }
+}
+
+function clickSpeed() {
+    if (x > b) {
+        x = Math.round(x - b);
+        z = z + 1;
+        b = b * 1.5
+        document.getElementById("demo").innerHTML = x + " " + "Eggs";
+    }
+    else {
+        alert("You Have Insufficient Funds! (" + Math.round(b) + " Eggs)")
+    }
+}
+
+function autoBuy() {
+    if (x > d) {
+        x = Math.round(x - d);
+        e = e + 1
+        d = d * 1.5
+        document.getElementById("demo").innerHTML = x + " " + "Eggs";
+        autoClick()
+    }
+    else {
+        alert("You Have Insufficient Funds! (" + Math.round(d) + " Eggs)")
+    }
+}
+
+function autoClick() {
+    if (c = "true")
+        setTimeout(autoClick, 1500);
+        x = x + e;
+        document.getElementById("demo").innerHTML = x + " " + "Eggs";
+}
+</script>
+
+</body>
+</html>

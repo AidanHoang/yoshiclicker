@@ -111,6 +111,7 @@ function autoBuy() {
         document.getElementById("demo").innerHTML = x + " " + "Eggs";
         autoClick()
         document.getElementById("eggsecond").innerHTML = "Eggs Per Second: " + e;
+        firstAuto()
     }
     else {
         alert("You Have Insufficient Funds! (" + Math.round(d) + " Eggs)")
@@ -131,10 +132,23 @@ function firstClick() {
         achieveClick()
 }
 
+function firstAuto() {
+    if (e === 1) {
+        alert("Achievement Get! \n Auto Clicker: Purchase your FIRST Auto Egg!");
+        g = 2;
+        achieveClick();
+    }
+}
+
 function achieveClick() {
-    if (g === 1)
+    if (g === 1) {
     document.getElementById("none").innerHTML = "Early Clicks";
     document.getElementById("none").style.paddingLeft = "280px";
+    }
+        else if (g === 2) {
+        document.getElementById("none").innerHTML = "Auto Clicker";
+        document.getElementById("none").style.paddingLeft = "270px";
+        }
 }
 </script>
 

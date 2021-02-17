@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
 </head>
 
 <body style="background-image:url(test.png);">
@@ -33,16 +34,19 @@
 
 </div id="top">
 
-<div id="shop" style="float:right;">
-<h1 style="float:right; padding-right:220px">Egg Shopkeeper</h1>
+<div id="shop" style="float:left;">
+<h1 style="float:left; padding-left:250px">Egg Shopkeeper</h1>
 <h1 style="clear:both"></h1>
-<div id="buttons">
+<div id="buttons" style="margin-left: 310px">
 <button type="button" onclick="clickSpeed()" style="display: block;">Click Multiplier</button>
 <p>&#160;</p>
 <button type="button" onclick="clickEff()" style="display: block;">Click Efficiency</button>
 <p>&#160;</p>
 <button type="button" onclick="autoBuy()" style="display: block;">Auto Lay Egg</button>
 </div id="buttons">
+<p>&#160;</p>
+<h1 style="padding-left:230px">Last Achievement</h1>
+<h1 id="none" style="padding-left:250px">None Achieved</h1>
 </div id="shop">
 
 </div id="full">
@@ -58,6 +62,7 @@ c = "true"
 d = 100
 e = 0
 f = 0
+g = 0
 
 function hoverOver() {
     document.getElementById("egg").style.width = "40%";
@@ -121,6 +126,14 @@ function autoClick() {
 function firstClick() {
     if (f === 1)
         alert("Achievement Get! \n Early Clicks: Click on The Egg Once!");
+        g = g + 1
+        achieveClick()
+}
+
+function achieveClick() {
+    if (g === 1)
+    document.getElementById("none").innerHTML = "Early Clicks";
+    document.getElementById("none").style.paddingLeft = "270px";
 }
 </script>
 

@@ -47,7 +47,7 @@ Fiery Games is owned and produced by YeetYoshi and Tideslus.">
 <p>&#160;</p>
 <div id="trademark" style="line-height: 0.5">
 <div id="counter" style="display:inline-block">
-<h2 style="font-family: 'Roboto', sans-serif; text-align:left; float:left; padding-left:10px">Fiery Games™ V. 0.010</h2>
+<h2 style="font-family: 'Roboto', sans-serif; text-align:left; float:left; padding-left:10px">Fiery Games™ V. 0.100</h2>
 <div id="realcount" style="float:right; text-align:right; padding-left:20px">
  <a href='https://www.free-counters.org/'>Get free Counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=2c28955b8b96a2d6160a9ce6ebd30b4ddf677907'></script>
 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/794496/t/8"></script>
@@ -60,15 +60,22 @@ Fiery Games is owned and produced by YeetYoshi and Tideslus.">
 <div id="shop" style="float:left;">
 <h1 style="float:left; padding-left:240px; font-family: 'Varela Round';">Egg Shopkeeper</h1>
 <h1 style="clear:both"></h1>
-<div id="buttons" style="margin-left: 310px">
+<div id="buttons" style="margin-left: 310px; line-height: 0.5; font-family: 'Varela Round';">
+<h2 style="margin-left: -15px">Click Speed</h2>
 <img type="button" src="clickmulti.png" id="speed" onclick="clickSpeed(); changePadding(); aniSpeed();" style="display: block; width:26%">
+<h2 style="margin-left: -35px">Egg Efficiency</h2>
 <img type="button" src="eggmulti.png" id="eff" onclick="clickEff(); changePadding(); aniEff();" style="display: block; width:26%">
+<h2 style="margin-left: -45px">Auto Egg Factory</h2>
 <img type="button" src="automining.png" id="buy" onclick="autoBuy(); changePadding(); aniBuy();" style="display: block; width:26%">
 </div id="buttons">
-<h1 style="padding-left:230px; font-family: 'Roboto', sans-serif;">Last Achievement</h1>
-<h1 id="none" style="padding-left:240px; font-family: 'Varela Round';">None Achieved</h1>
-<h1 style="padding-left:230px; font-family: 'Roboto', sans-serif;">Too Overpowered?</h1>
+<div id="achieves" style="line-height:0.8;">
+<h2 style="padding-left:260px; font-family: 'Roboto', sans-serif;">Last Achievement</h2>
+<h2 id="none" style="padding-left:270px; font-family: 'Varela Round';">None Achieved</h2>
+</div id="achieves">
+<div id="pres" style="line-height:0.8;">
+<h2 style="padding-left:255px; font-family: 'Roboto', sans-serif;">Too Overpowered?</h2>
 <button style="margin-left: 290px" type="button" onClick="comingSoon()">Rebirth (PRESTIGE)</button>
+</div id="pres">
 </div id="shop">
 
 </div id="full">
@@ -262,15 +269,15 @@ function firstAuto() {
 function achieveClick() {
     if (g === 1) {
     document.getElementById("none").innerHTML = "Early Clicks";
-    document.getElementById("none").style.paddingLeft = "270px";
+    document.getElementById("none").style.paddingLeft = "290px";
     }
         else if (g === 2) {
         document.getElementById("none").innerHTML = "Auto Clicker";
-        document.getElementById("none").style.paddingLeft = "270px";
+        document.getElementById("none").style.paddingLeft = "290px";
         }
             else if (g === 3) {
             document.getElementById("none").innerHTML = "Hand Abuse";
-            document.getElementById("none").style.paddingLeft = "265px";
+            document.getElementById("none").style.paddingLeft = "285px";
             }
 }
 

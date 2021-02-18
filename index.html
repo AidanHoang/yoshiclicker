@@ -61,16 +61,12 @@ Fiery Games is owned and produced by YeetYoshi and Tideslus.">
 <h1 style="float:left; padding-left:240px; font-family: 'Varela Round';">Egg Shopkeeper</h1>
 <h1 style="clear:both"></h1>
 <div id="buttons" style="margin-left: 310px">
-<button type="button" onclick="clickSpeed(); changePadding()" style="display: block;">Click Multiplier</button>
-<p>&#160;</p>
-<button type="button" onclick="clickEff(); changePadding()" style="display: block;">Click Efficiency</button>
-<p>&#160;</p>
-<button type="button" onclick="autoBuy(); changePadding()" style="display: block;">Auto Lay Egg</button>
+<img type="button" src="clickmulti.png" id="speed" onclick="clickSpeed(); changePadding(); aniSpeed();" style="display: block; width:26%">
+<img type="button" src="eggmulti.png" id="eff" onclick="clickEff(); changePadding(); aniEff();" style="display: block; width:26%">
+<img type="button" src="automining.png" id="buy" onclick="autoBuy(); changePadding(); aniBuy();" style="display: block; width:26%">
 </div id="buttons">
-<p>&#160;</p>
 <h1 style="padding-left:230px; font-family: 'Roboto', sans-serif;">Last Achievement</h1>
 <h1 id="none" style="padding-left:240px; font-family: 'Varela Round';">None Achieved</h1>
-<p>&#160;</p>
 <h1 style="padding-left:230px; font-family: 'Roboto', sans-serif;">Too Overpowered?</h1>
 <button style="margin-left: 290px" type="button" onClick="comingSoon()">Rebirth (PRESTIGE)</button>
 </div id="shop">
@@ -78,6 +74,46 @@ Fiery Games is owned and produced by YeetYoshi and Tideslus.">
 </div id="full">
 
 <script>
+
+function aniSpeed() {
+    setTimeout(speedBig, 0)
+    setTimeout(speedSmall, 100)
+}
+
+function speedBig() {
+    document.getElementById("speed").style.width = "28%"
+}
+
+function speedSmall() {
+    document.getElementById("speed").style.width = "26%"
+}
+
+function aniEff() {
+    setTimeout(effBig, 0)
+    setTimeout(effSmall, 100)
+}
+
+function effBig() {
+    document.getElementById("eff").style.width = "28%"
+}
+
+function effSmall() {
+    document.getElementById("eff").style.width = "26%"
+}
+
+function aniBuy() {
+    setTimeout(buyBig, 0)
+    setTimeout(buySmall, 100)
+}
+
+function buyBig() {
+    document.getElementById("buy").style.width = "28%"
+}
+
+function buySmall() {
+    document.getElementById("buy").style.width = "26%"
+}
+
 var x, y, z, a, b, c, d, e, f, g, h, i
 x = 0
 y = 1
@@ -164,7 +200,7 @@ function clickEff() {
         document.getElementById("demo").innerHTML = x + " " + "Eggs";
     }
     else {
-        alert("You Have Insufficient Funds! (" + Math.round(a) + " Eggs)");
+        alert("You Have Insufficient Funds to Purchase Click Efficiency! (" + Math.round(a) + " Eggs)");
     }
 }
 
@@ -176,7 +212,7 @@ function clickSpeed() {
         document.getElementById("demo").innerHTML = x + " " + "Eggs";
     }
     else {
-        alert("You Have Insufficient Funds! (" + Math.round(b) + " Eggs)")
+        alert("You Have Insufficient Funds to Purchase Click Speed! (" + Math.round(b) + " Eggs)")
     }
 }
 
@@ -191,7 +227,7 @@ function autoBuy() {
         firstAuto()
     }
     else {
-        alert("You Have Insufficient Funds! (" + Math.round(d) + " Eggs)")
+        alert("You Have Insufficient Funds to Purchase Auto Eggs! (" + Math.round(d) + " Eggs)")
     }
 }
 

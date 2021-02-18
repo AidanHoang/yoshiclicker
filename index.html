@@ -101,12 +101,32 @@ function hoverOut() {
 }
 
 function clickNow() {
+    if (x < 100000) {
     x =  x + h * (y * z);
     document.getElementById("demo").innerHTML = x + " " + "Eggs";
     f = f + 1
     firstClick();
     setTimeout(animationBack, 0)
     setTimeout(animationClick, 200)
+    }
+    else if (x < 1000000) {
+    x =  x + h * (y * z);
+    document.getElementById("demo").innerHTML = x + " " + "Eggs";
+    f = f + 1
+    firstClick();
+    setTimeout(animationBack, 0)
+    setTimeout(animationClick, 200)
+    document.getElementById("demo").style.paddingLeft = "120px";
+    }
+    else {
+    x =  x + h * (y * z);
+    document.getElementById("demo").innerHTML = x + " " + "Eggs";
+    f = f + 1
+    firstClick();
+    setTimeout(animationBack, 0)
+    setTimeout(animationClick, 200)
+    document.getElementById("demo").style.paddingLeft = "105px";
+    }
 }
 
 function doNothing() {
@@ -227,7 +247,7 @@ else {
 }
 
 function devMode() {
-    x = 10000000000000000000000000000000000000000000
+    x = 1000000
 }
 </script>
 

@@ -20,6 +20,7 @@
 <meta property="og:image" content="egg.png" />
 <meta property="og:description" content="The Yoshi Clicker Official Game" />
 <meta name="theme-color" content="#FF0000">
+<title>Yoshi Clicker | Game</title>
 
 </head>
 
@@ -188,7 +189,7 @@ function achieveClick() {
 
 function comingSoon() {
     if (i > 0) {
-        alert("You have already prestiged ONCE!");
+        alert("You have already prestiged ONCE!\nDon't worry, more prestiges are coming SOON!");
     }
     else if (x > 1000000) {
     alert("Welcome to the Futuristic Egg Era!\nYou will have a 2 TIME Egg Multiplier!\nKeep up the Dino Legacy!");
@@ -202,6 +203,7 @@ function comingSoon() {
     document.body.style.backgroundImage = "url('top2.png')";
     document.getElementById("demo").innerHTML = "0 Eggs";
     h = h + 1
+    i = i + 1
 }
 else {
     alert("You Have Insufficient Funds to Prestige! (1 Million Eggs)")

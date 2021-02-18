@@ -204,14 +204,14 @@ function doNothing() {
 }
 
 function animationClick() {
-    if (i === 0)
+    if (i === 0, i === 2)
     document.getElementById("egg").src = "egg2.png";
         else if (i === 1)
         document.getElementById("egg").src = "eggred.png";
 }
 
 function animationBack() {
-    if (i === 0)
+    if (i === 0, i === 2)
     document.getElementById("egg").src = "egg.png";
         else if (i === 1)
         document.getElementById("egg").src = "eggred2.png";
@@ -300,11 +300,11 @@ function achieveClick() {
 }
 
 function comingSoon() {
-    if (i > 0) {
-        alert("You have already prestiged ONCE!\nDon't worry, more prestiges are coming SOON!");
+    if (i > 2) {
+        alert("You have already prestiged TWICE!\nDon't worry, more prestiges are coming SOON!");
     }
-    else if (x > 1000000) {
-    alert("Welcome to the Futuristic Egg Era!\nYou will have a 2 TIME Egg Multiplier!\nKeep up the Dino Legacy!");
+    else if (x > 1000000, i === 0) {
+    alert("Welcome to the Futuristic Egg Era!\nYou will have a 4 TIME Egg Multiplier!\nKeep up the Dino Legacy!");
     x = 0;
     y = 1;
     z = 1;
@@ -319,13 +319,30 @@ function comingSoon() {
     h = h + 1
     i = i + 1
 }
+    else if (x > 2000000, i === 1) {
+    x = 0;
+    y = 1;
+    z = 1;
+    b = 45;
+    d = 100;
+    a = 25;
+    e = 0;
+    document.body.style.backgroundImage = "url('top3.png')";
+    document.getElementById("demo").innerHTML = "0 Eggs";
+    document.getElementById("egg").src = "egg2.png";
+    document.getElementById("demo").style.paddingLeft = "150px";
+    h = h + 3;
+    i = i + 1;
+    alert("Welcome to the Jurrasic Egg Era!\nYou will have a 4 TIME Egg Multiplier!\nKeep up the Dino Legacy!");
+    }
 else {
-    alert("You Have Insufficient Funds to Prestige! (1 Million Eggs)")
+    alert("You Have Insufficient Funds to Prestige! (2 Million Eggs)");
 }
 }
 
 function devMode() {
-    x = 1000
+    x = 100000000
+    h = 100000000
 }
 </script>
 

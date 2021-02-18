@@ -168,10 +168,16 @@ function autoClick() {
 }
 
 function firstClick() {
-    if (f === 1)
+    if (f === 1) {
         alert("Achievement Get! \n Early Clicks: Click on The Egg Once!");
-        g = 1
-        achieveClick()
+        g = 1;
+        achieveClick();
+    }
+            else if (f === 100) {
+            alert("Achievement Get! \n Hand Abuse: Click on The Egg 100 Times!");
+            g = 3;
+            achieveClick();
+            }
 }
 
 function firstAuto() {
@@ -191,6 +197,10 @@ function achieveClick() {
         document.getElementById("none").innerHTML = "Auto Clicker";
         document.getElementById("none").style.paddingLeft = "270px";
         }
+            else if (g === 3) {
+            document.getElementById("none").innerHTML = "Hand Abuse";
+            document.getElementById("none").style.paddingLeft = "265px";
+            }
 }
 
 function comingSoon() {

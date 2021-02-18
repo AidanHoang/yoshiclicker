@@ -26,11 +26,14 @@
 </div id="toptext">
 <p>&#160;</p>
 <p>&#160;</p>
-<img id="egg" onmouseover="hoverOver()" onmouseout="hoverOut()" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ed991cf4-7c8c-4530-b6ba-a3abf3ab2eae/dd1l1e7-c67afc92-74e1-4dbb-9073-50e9e01e7353.png/v1/fill/w_400,h_439,strp/super_mario__yoshi_egg_2d_by_joshuat1306_dd1l1e7-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00MzkiLCJwYXRoIjoiXC9mXC9lZDk5MWNmNC03YzhjLTQ1MzAtYjZiYS1hM2FiZjNhYjJlYWVcL2RkMWwxZTctYzY3YWZjOTItNzRlMS00ZGJiLTkwNzMtNTBlOWUwMWU3MzUzLnBuZyIsIndpZHRoIjoiPD00MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.UQWV_lHi2tHvMDytLzQGfSkkm11EgoVD-xu7ZA3KRHY" type="button" onclick="clickNow()" style="width:35%; padding-left:150px">
+<img id="egg" onmouseover="hoverOver()" onmouseout="hoverOut()" src="egg2.png" type="button" onclick="clickNow(); animationClick();" style="width:35%; padding-left:150px;">
 <h2 style="padding-left:140px; font-family: 'Roboto', sans-serif;" id="eggsecond">Eggs Per Second: 0</h2>
 <p>&#160;</p>
 <p>&#160;</p>
+<div id="trademark" style="line-height: 0.5">
+<h2 style="font-family: 'Roboto', sans-serif;">Game Made by Fiery Games™</h2>
 <h2 style="font-family: 'Roboto', sans-serif;">V. 0.002</h2>
+</div id="trademark">
 
 </div id="top">
 
@@ -47,12 +50,15 @@
 <p>&#160;</p>
 <h1 style="padding-left:230px; font-family: 'Roboto', sans-serif;">Last Achievement</h1>
 <h1 id="none" style="padding-left:240px; font-family: 'Varela Round';">None Achieved</h1>
+<p>&#160;</p>
+<h1 style="padding-left:230px; font-family: 'Roboto', sans-serif;">Too Overpowered?</h1>
+<button style="margin-left: 290px" type="button" onClick="comingSoon()">Rebirth (PRESTIGE)</button>
 </div id="shop">
 
 </div id="full">
 
 <script>
-var x, y, z, a, b, c, d, e, f
+var x, y, z, a, b, c, d, e, f, g, h, i
 x = 0
 y = 1
 z = 1
@@ -63,6 +69,8 @@ d = 100
 e = 0
 f = 0
 g = 0
+h = 1
+i = 0
 
 function hoverOver() {
     document.getElementById("egg").style.width = "40%";
@@ -73,10 +81,24 @@ function hoverOut() {
 }
 
 function clickNow() {
-    x =  x + y * z;
+    x =  h * (x + y * z);
     document.getElementById("demo").innerHTML = x + " " + "Eggs";
     f = f + 1
-    firstClick()
+    firstClick();
+    setTimeout(animationBack, 0)
+    setTimeout(animationClick, 200)
+}
+
+function doNothing() {
+    x = x
+}
+
+function animationClick() {
+    document.getElementById("egg").src = "egg2.png";
+}
+
+function animationBack() {
+    document.getElementById("egg").src = "egg.png";
 }
 
 function clickEff() {
@@ -120,7 +142,7 @@ function autoBuy() {
 
 function autoClick() {
     if (c = "true")
-        setTimeout(autoClick, 1500);
+        setTimeout(autoClick, 1000);
         x = x + e;
         document.getElementById("demo").innerHTML = x + " " + "Eggs";
 }
@@ -143,12 +165,27 @@ function firstAuto() {
 function achieveClick() {
     if (g === 1) {
     document.getElementById("none").innerHTML = "Early Clicks";
-    document.getElementById("none").style.paddingLeft = "280px";
+    document.getElementById("none").style.paddingLeft = "270px";
     }
         else if (g === 2) {
         document.getElementById("none").innerHTML = "Auto Clicker";
         document.getElementById("none").style.paddingLeft = "270px";
         }
+}
+
+function comingSoon() {
+    if (i > 0) {
+        alert("You have already prestiged ONCE!");
+    }
+    else if (x > 1000000) {
+    alert("Welcome to the Futuristic Egg Era!\nYou will have a 2 TIME Egg Multiplier!\nKeep up the Dino Legacy!");
+    x = x - 1000000;
+    document.body.style.backgroundImage = "url('top2.png')";
+    i = i + 1
+}
+else {
+    alert("You Have Insufficient Funds to Prestige! (1 Million Eggs)")
+}
 }
 </script>
 

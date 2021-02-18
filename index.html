@@ -32,7 +32,7 @@
 <p>&#160;</p>
 <div id="trademark" style="line-height: 0.5">
 <h2 style="font-family: 'Roboto', sans-serif;">Game Made by Fiery Games™</h2>
-<h2 style="font-family: 'Roboto', sans-serif;">V. 0.010</h2>
+<h2 style="font-family: 'Roboto', sans-serif;">V. 0.002</h2>
 </div id="trademark">
 
 </div id="top">
@@ -59,7 +59,7 @@
 
 <script>
 var x, y, z, a, b, c, d, e, f, g, h, i
-x = 0
+x = 1000000000000
 y = 1
 z = 1
 a = 25
@@ -81,7 +81,7 @@ function hoverOut() {
 }
 
 function clickNow() {
-    x =  h * (x + y * z);
+    x =  x + h * (y * z);
     document.getElementById("demo").innerHTML = x + " " + "Eggs";
     f = f + 1
     firstClick();
@@ -181,7 +181,7 @@ function comingSoon() {
     alert("Welcome to the Futuristic Egg Era!\nYou will have a 2 TIME Egg Multiplier!\nKeep up the Dino Legacy!");
     x = x - 1000000;
     document.body.style.backgroundImage = "url('top2.png')";
-    i = i + 1
+    h = h + 1
 }
 else {
     alert("You Have Insufficient Funds to Prestige! (1 Million Eggs)")

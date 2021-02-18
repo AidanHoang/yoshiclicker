@@ -61,11 +61,11 @@ Fiery Games is owned and produced by YeetYoshi and Tideslus.">
 <h1 style="float:left; padding-left:240px; font-family: 'Varela Round';">Egg Shopkeeper</h1>
 <h1 style="clear:both"></h1>
 <div id="buttons" style="margin-left: 310px">
-<button type="button" onclick="clickSpeed()" style="display: block;">Click Multiplier</button>
+<button type="button" onclick="clickSpeed(); changePadding()" style="display: block;">Click Multiplier</button>
 <p>&#160;</p>
-<button type="button" onclick="clickEff()" style="display: block;">Click Efficiency</button>
+<button type="button" onclick="clickEff(); changePadding()" style="display: block;">Click Efficiency</button>
 <p>&#160;</p>
-<button type="button" onclick="autoBuy()" style="display: block;">Auto Lay Egg</button>
+<button type="button" onclick="autoBuy(); changePadding()" style="display: block;">Auto Lay Egg</button>
 </div id="buttons">
 <p>&#160;</p>
 <h1 style="padding-left:230px; font-family: 'Roboto', sans-serif;">Last Achievement</h1>
@@ -129,16 +129,31 @@ function clickNow() {
     }
 }
 
+function changePadding() {
+    if (x < 1000000) {
+    document.getElementById("demo").style.paddingLeft = "150px";
+    }
+    else if (x > 1000000) {
+    document.getElementById("demo").style.paddingLeft = "105px";
+    }
+}
+
 function doNothing() {
     x = x
 }
 
 function animationClick() {
+    if (i === 0)
     document.getElementById("egg").src = "egg2.png";
+        else if (i === 1)
+        document.getElementById("egg").src = "eggred.png";
 }
 
 function animationBack() {
+    if (i === 0)
     document.getElementById("egg").src = "egg.png";
+        else if (i === 1)
+        document.getElementById("egg").src = "eggred2.png";
 }
 
 function clickEff() {
@@ -238,6 +253,8 @@ function comingSoon() {
     e = 0;
     document.body.style.backgroundImage = "url('top2.png')";
     document.getElementById("demo").innerHTML = "0 Eggs";
+    document.getElementById("egg").src = "eggred.png";
+    document.getElementById("demo").style.paddingLeft = "150px";
     h = h + 1
     i = i + 1
 }
@@ -247,8 +264,10 @@ else {
 }
 
 function devMode() {
-    x = 1000000
+    x = 10000000000
 }
+
+devMode()
 </script>
 
 <!-- Clarity tracking code for https://games.fierygames.tk/ -->

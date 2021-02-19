@@ -303,8 +303,17 @@ function comingSoon() {
     if (i > 1) {
         alert("You have already prestiged TWICE!\nDon't worry, more prestiges are coming SOON!");
     }
-    else if (x > 1000000, i === 0) {
-    alert("Welcome to the Futuristic Egg Era!\nYou will have a 4 TIME Egg Multiplier!\nKeep up the Dino Legacy!");
+    else if (i === 0) {
+    presOne()
+    }
+    else if (i === 1) {
+    presTwo()
+    }
+}
+
+function presOne() {
+    if (x > 1000000) {
+    alert("Welcome to the Futuristic Egg Era!\nYou will have a 2 TIME Egg Multiplier!\nKeep up the Dino Legacy!");
     x = 0;
     y = 1;
     z = 1;
@@ -318,8 +327,14 @@ function comingSoon() {
     document.getElementById("demo").style.paddingLeft = "150px";
     h = h + 1
     i = i + 1
+    }
+    else {
+        alert("You Have Insufficient Funds to Prestige! (1 Million Eggs)");
+    }
 }
-    else if (x > 2000000, i === 1) {
+
+function presTwo() {
+    if (x > 2000000) {
     x = 0;
     y = 1;
     z = 1;
